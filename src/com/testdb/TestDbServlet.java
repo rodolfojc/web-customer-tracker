@@ -26,8 +26,8 @@ public class TestDbServlet extends HttpServlet {
 		String user = "hbstudent";
 		String pass = "hbstudent";
 		
-		String jdbcUr1 = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=fase&serverTimezone=UTC";
-		String driver = "com.mysql.jdbc.Driver";
+		String jdbcUr1 = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=UTC";
+		String driver = "com.mysql.cj.jdbc.Driver";
 		
 		try {
 			
@@ -35,10 +35,13 @@ public class TestDbServlet extends HttpServlet {
 			
 			out.println("Connecting to DB "+jdbcUr1);
 			
+			Class.forName(driver);
+			
 			Connection myConn = DriverManager.getConnection(jdbcUr1, user, pass);
 			
 			out.println("Success!!!");
 			
+			myConn.close();
 		}
 		catch(Exception exc) {
 			exc.printStackTrace();
