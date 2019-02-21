@@ -24,6 +24,10 @@
 	
 		<div id="content">
 		
+		<input type="button" value="Add Customer" onclick = "windows.location.href='showFormForAdd'; return false;"
+		class="add-button"/>
+		
+		
 		<!-- HTML TABLE -->
 		<table>
 			<tr>
