@@ -35,4 +35,9 @@ public class CustomerController {
 		return "list-customers";
 	}
 	
+	@GetMapping("/showFormForAdd")
+	public String showFormForAdd() {
+		return "customer-form";
+	}
+	
 }
