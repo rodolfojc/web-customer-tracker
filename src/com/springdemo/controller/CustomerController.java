@@ -56,16 +56,14 @@ public class CustomerController {
 	}
 	
 	@GetMapping("showFormForUpdate")
-	public String showFormForUpdate(@RequestParam("customerID") int theID, Model theModel) {
+	public String showFormForUpdate(@RequestParam("customerId") int theID, Model theModel) {
 		
 		//GET CUSTOMER FROM SERVICE
 		Customer theCustomer = customerService.getCustomer(theID);
 		
 		//SET CUSTOMER AS MODEL ATTRIBUTE TO PRE-POPULATE THE FORM
 		theModel.addAttribute("customer", theCustomer);
-		
-		
-		
+				
 		return "customer-form";
 	}
 	
