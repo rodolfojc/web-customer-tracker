@@ -72,10 +72,8 @@ public class CustomerController {
 		
 		//DELETE CUSTOMER
 		customerService.deleteCustomer(theID);
-		
-		
-		
-		return null;
+				
+		return "redirect:/customer/list";
 	}
 	
 	
