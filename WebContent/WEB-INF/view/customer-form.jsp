@@ -26,6 +26,8 @@
 		<!-- SAVE CUSTOMER MAPPING -->
 		<form:form action="saveCustomer" modelAttribute="customer" method="POST">
 		
+		<!-- SOCIATE THE DATA WITH CUSTOMER -->
+		<form:hidden path="id"/>
 		<table>
 			<tbody>
 				<tr>

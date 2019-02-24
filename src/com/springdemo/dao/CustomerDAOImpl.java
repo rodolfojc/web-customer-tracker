@@ -42,8 +42,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 		//GET CURRENT HIBERNATE SESSION
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		//SAVE THE CUSTOMER
-		currentSession.save(theCustomer);
+		//SAVEORUPDATE THE CUSTOMER
+		currentSession.saveOrUpdate(theCustomer);
 		
 	}
 
